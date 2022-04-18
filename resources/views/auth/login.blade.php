@@ -1,4 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.auth')
+
+@section('title')
+    Log in
+@endsection 
 
 @section('content')
 <div class="container">
@@ -71,3 +75,5 @@
     </div>
 </div>
 @endsection
+
+
