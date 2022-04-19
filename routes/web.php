@@ -22,3 +22,13 @@ Route::get('/', function () {
 Auth::routes(['verify' => true]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('verified');
+Route::get('/dashboard-account', [App\Http\Controllers\DashboardSettingController::class, 'index'])
+    ->name('dashboard-settings-account');
+Route::post('/dashboard-account/{redirect}', [App\Http\Controllers\DashboardSettingController::class, 'update'])
+    ->name('dashboard-settings-redirect');
+    
+Route::prefix()
+->group(function(){
+    Route::resource('/user', DashboardSettingController::class);
+    
+});

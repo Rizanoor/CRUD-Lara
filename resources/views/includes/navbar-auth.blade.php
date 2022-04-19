@@ -24,7 +24,7 @@
                 <div class="modal-body" style="padding: 2rem; padding-top: 0; padding-bottom: 0">
                   <ul class="navbar-nav responsive me-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
-                      <a class="nav-link" href="#">Home</a>
+                      <a class="nav-link" href="{{ route('home') }}">Home</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#">Feature</a>
@@ -53,7 +53,7 @@
           <div class="collapse navbar-collapse" id="navbarTogglerDemo">
             <ul class="navbar-nav me-auto mt-2 mt-lg-0">
               <li class="nav-item active">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="{{ route('home') }}">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Feature</a>
