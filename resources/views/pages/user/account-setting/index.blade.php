@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('title')
-    Account Setting
+    Settings
 @endsection
 
 @section('content')
@@ -24,18 +24,25 @@
                     </p>
                   </div>
                   <hr>
+                  @include('components.alert')
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="name">Your Name</label>
-                        <input type="text" class="form-control" id="name" name="name" required value="{{old('name') ?: Auth::user()->name}}">
+                        <input type="text" class="form-control {{$errors->has('name') ? 'is-invalid' : ''}}" id="name" name="name" required value="{{old('name') ?: Auth::user()->name}}">
+                          @if ($errors->has('name'))
+                            <p class="text-danger">{{$errors->first('name')}}</p>
+                          @endif
                       </div>
                     </div>
         
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="email">Your Email</label>
-                        <input type="email" class="form-control" id="email" name="email" required value="{{old('email') ?: Auth::user()->email}}">
+                        <input type="email" class="form-control {{$errors->has('email') ? 'is-invalid' : ''}}" id="email" name="email" required value="{{old('email') ?: Auth::user()->email}}">
+                          @if ($errors->has('email'))
+                            <p class="text-danger">{{$errors->first('email')}}</p>
+                          @endif
                       </div>
                     </div>
 
@@ -49,7 +56,7 @@
         
                     <div class="form-group mt-2">
                       <label>Foto</label>
-                      <input type="file" name="photos" id="photos" class="form-control" required>
+                      <input type="file" name="photos" id="photos" class="form-control">
                     </div>
                   </div>
 

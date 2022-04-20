@@ -16,7 +16,8 @@
 
       <!-- Right Column -->
       <div class="right-column d-flex flex-column align-items-lg-start align-items-center text-lg-start text-center">
-        <h2 class="title-text">3 Keys Benefit</h2>
+        <h2 class="title-text">3 Games Traditional</h2>
+        <br>
         <ul style="padding: 0; margin: 0">
           <li class="list-unstyled" style="margin-bottom: 2rem">
             <h4
@@ -24,11 +25,12 @@
               <span class="circle text-white d-flex align-items-center justify-content-center">
                 1
               </span>
-              Trusted Mentor
+              Petak umpet
             </h4>
             <p class="text-caption">
               We have provided highly experienced mentors<br class="d-sm-inline d-none" />
               for several years.
+              <a href="" class="badge bg-success" style="text-decoration:none">Try</a>
             </p>
           </li>
           <li class="list-unstyled" style="margin-bottom: 2rem">
@@ -37,11 +39,12 @@
               <span class="circle text-white d-flex align-items-center justify-content-center">
                 2
               </span>
-              Access Forever
+              Layangan
             </h4>
             <p class="text-caption">
               Are you busy at work so it's hard to consult? don't<br class="d-sm-inline d-none" />
               worry because you can access anytime.
+              <a href="" class="badge bg-success" style="text-decoration:none">Try</a>
             </p>
           </li>
           <li class="list-unstyled" style="margin-bottom: 4rem">
@@ -50,11 +53,12 @@
               <span class="circle text-white d-flex align-items-center justify-content-center">
                 3
               </span>
-              Halfpenny
+              Bentengan
             </h4>
             <p class="text-caption">
               We provide economical packages for those of you<br class="d-sm-inline d-none" />
               who are still in school or workers.
+              <a href="" class="badge bg-success" style="text-decoration:none">Try</a>
             </p>
           </li>
         </ul>

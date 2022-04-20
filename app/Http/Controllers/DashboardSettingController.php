@@ -107,6 +107,7 @@ class DashboardSettingController extends Controller
         // return 'upload';
 
         $item->update($data);
+        $request->session()->flash('success', "Your account '{$item->name}' has been updated");
 
         return redirect()->route($redirect);
     }
