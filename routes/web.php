@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +22,7 @@ Route::get('/', function () {
 
 Auth::routes(['verify' => true]);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('verified');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('verified');
 Route::get('/settings', [App\Http\Controllers\DashboardSettingController::class, 'index'])
     ->name('dashboard-settings-account');
 Route::post('/settings/{redirect}', [App\Http\Controllers\DashboardSettingController::class, 'update'])
@@ -29,9 +30,10 @@ Route::post('/settings/{redirect}', [App\Http\Controllers\DashboardSettingContro
 
 Route::prefix('admin')
     ->namespace('Admin')
-    ->middleware(['auth', 'admin'])
+    // ->middleware(['auth', 'admin'])
     ->group(function(){
         Route::get('/', [App\Http\Controllers\Admin\DashboardController::class, 'index'])
-      ->name('admin-dashboard');
+            ->name('admin-dashboard');
+            Route::resource('category', 'CategoryController');
     
 });

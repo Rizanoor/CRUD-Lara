@@ -99,3 +99,21 @@ body {
     border-color: transparent;
     box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
 }
+
+.card-body {
+    background: #F8F9FA;
+}
+
+.dashboard-subtitle {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    color: #9191a9;
+  }
+
+.dashboard-title {
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 36px;
+    color: #0c0d36;
+  }

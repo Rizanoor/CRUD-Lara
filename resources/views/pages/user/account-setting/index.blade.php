@@ -55,8 +55,11 @@
                     </div>
         
                     <div class="form-group mt-2">
-                      <label>Foto</label>
-                      <input type="file" name="photos" id="photos" class="form-control">
+                      <form action="/upload" method="POST">
+                        @csrf
+                        <label>Foto</label>
+                        <input type="file" name="avatar" id="avatar" class="form-control">
+                      </form>
                     </div>
                   </div>
 
