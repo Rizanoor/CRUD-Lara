@@ -53,7 +53,11 @@ body {
 }
 
 .sidebar .nav-link.active {
-    color: #2470dc;
+    /* color: #2470dc; */
+    background: -webkit-gradient(linear, right top, left top, color-stop(2%, rgba(255, 113, 88, 0.32)), to(rgba(255, 255, 255, 0)));
+    background: linear-gradient(270deg, rgba(000, 113, 188, 0.32) 2%, rgba(255, 255, 255, 0) 100%);
+    border-right: 4px solid #000000;
+    color: #0c0d36;
 }
 
 .sidebar .nav-link:hover .feather,
@@ -100,9 +104,6 @@ body {
     box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
 }
 
-.card-body {
-    background: #F8F9FA;
-}
 
 /* style form */
 /* .page-dashboard {
@@ -250,6 +251,6 @@ body {
           right: 0;
         }
       }
-    } */
+    }
   }
-  
+   */

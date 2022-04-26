@@ -13,7 +13,7 @@
         {{-- kalau ada request yang urlnya dashboard/post maka tampilkan class active tapi kalau bukan kosongin --}}
         <a class="nav-link {{ Request::is('admin/user*') ? 'active' : '' }}"
            href="{{ route('user.index') }}">
-          <span data-feather="file-text"></span>
+          <span data-feather="user"></span>
           Users
         </a>
       </li>
