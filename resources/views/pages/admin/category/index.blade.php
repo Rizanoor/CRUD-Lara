@@ -1,6 +1,7 @@
 @extends('layouts.admin')
 
 @section('title')
+<<<<<<< HEAD
     Category Dashboard
 @endsection
 
@@ -39,6 +40,44 @@
                                     <tbody></tbody>
                                 </table>
                             </div>
+=======
+    Category
+@endsection
+
+@section('container')
+<div
+class="section-content section-dashboard-home"
+data-aos="fade-up"
+>
+<div class="container-fluid">
+    <div class="dashboard-heading">
+        <h2 class="dashboard-title pt-3">Category</h2>
+        <p class="dashboard-subtitle">
+            List of Categories
+        </p>
+    </div>
+    <div class="dashboard-content">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <a href="{{  route('category.create') }}" class="btn btn-primary mb-3">
+                            + Tambah Kategori Baru
+                        </a>
+                        <div class="table-responsive">
+                            <table class="table table-hover scroll-horizontal-vertical w-100" id="crudTable">
+                                <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nama</th>
+                                    <th>Foto</th>
+                                    <th>Slug</th>
+                                    <th>Aksi</th>
+                                </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+>>>>>>> 0d68380e9906ecbfa109cf211bf52cf4e96260ca
                         </div>
                     </div>
                 </div>
@@ -46,8 +85,14 @@
         </div>
     </div>
 </div>
+<<<<<<< HEAD
 @endsection
 
+=======
+</div>
+
+@endsection
+>>>>>>> 0d68380e9906ecbfa109cf211bf52cf4e96260ca
 
 @push('addon-script')
     <script>
