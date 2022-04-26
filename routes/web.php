@@ -30,7 +30,7 @@ Route::post('/settings/{redirect}', [App\Http\Controllers\DashboardSettingContro
 
 Route::prefix('admin')
     ->namespace('Admin')
-    // ->middleware(['auth', 'admin'])
+    ->middleware(['auth', 'admin'])
     ->group(function(){
         Route::get('/', [App\Http\Controllers\Admin\DashboardController::class, 'index'])
             ->name('admin-dashboard');

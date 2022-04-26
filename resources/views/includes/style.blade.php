@@ -1,21 +1,5 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
-{{-- admin dashboard --}}
-
- <!-- Bootstrap core CSS -->
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
- {{-- google fonts --}}
- <link rel="preconnect" href="https://fonts.googleapis.com">
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-
- 
- <!-- Custom styles for this template -->
- <link href="/css/dashboard.css" rel="stylesheet">
- 
- {{-- datatables --}}
- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.11.5/datatables.min.css"/>    
 
 
 {{-- Header --}}
@@ -215,92 +199,6 @@
   }
 </style>
 
-{{-- content --}}
-<style>
-  @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
-  .content-3-2 .btn:focus,
-  .content-3-2 .btn:active {
-    outline: none !important;
-  }
-
-  .content-3-2 {
-    padding: 5rem 2rem;
-  }
-
-  .content-3-2 .img-hero {
-    width: 100%;
-    margin-bottom: 3rem;
-  }
-
-  .content-3-2 .right-column {
-    width: 100%;
-  }
-
-  .content-3-2 .title-text {
-    font: 600 1.875rem/2.25rem Poppins, sans-serif;
-    margin-bottom: 2.5rem;
-    letter-spacing: -0.025em;
-    color: #121212;
-  }
-
-  .content-3-2 .title-caption {
-    font: 500 1.5rem/2rem Poppins, sans-serif;
-    margin-bottom: 1.25rem;
-    color: #121212;
-  }
-
-  .content-3-2 .circle {
-    font: 500 1.25rem/1.75rem Poppins, sans-serif;
-    height: 3rem;
-    width: 3rem;
-    margin-bottom: 1.25rem;
-    border-radius: 9999px;
-    background-color: #27c499;
-  }
-
-  .content-3-2 .text-caption {
-    font: 400 1rem/1.75rem Poppins, sans-serif;
-    letter-spacing: 0.025em;
-    color: #565656;
-  }
-
-  .content-3-2 .btn-learn {
-    font: 600 1rem/1.5rem Poppins, sans-serif;
-    padding: 1rem 2.5rem;
-    background-color: #27c499;
-    transition: 0.3s;
-    letter-spacing: 0.025em;
-    border-radius: 0.75rem;
-  }
-
-  .content-3-2 .btn:hover {
-    background-color: #45dbb2;
-    transition: 0.3s;
-  }
-
-  @media (min-width: 768px) {
-    .content-3-2 .title-text {
-      font: 600 2.25rem/2.5rem Poppins, sans-serif;
-    }
-  }
-
-  @media (min-width: 992px) {
-    .content-3-2 .img-hero {
-      width: 50%;
-      margin-bottom: 0;
-    }
-
-    .content-3-2 .right-column {
-      width: 50%;
-    }
-
-    .content-3-2 .circle {
-      margin-right: 1.25rem;
-      margin-bottom: 0;
-    }
-  }
-</style>
 
 
 {{-- Footer --}}
