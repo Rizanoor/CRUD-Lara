@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('title')
-    User
+    User Dashboard
 @endsection
 
 @section('container')
@@ -11,7 +11,7 @@ data-aos="fade-up"
 >
 <div class="container-fluid">
     <div class="dashboard-heading">
-        <h2 class="dashboard-title pt-3">User</h2>
+        <h2 class="dashboard-title pt-3">Users</h2>
         <p class="dashboard-subtitle">
             List of Users
         </p>

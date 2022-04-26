@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('title')
-    Category
+    Category Dashboard
 @endsection
 
 @section('container')
