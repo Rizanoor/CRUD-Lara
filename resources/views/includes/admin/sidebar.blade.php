@@ -28,12 +28,12 @@
         </a>
       </li>
 
-      {{-- <li class="nav-item">
+      <li class="nav-item">
         <a class="nav-link {{ Request::is('admin/posts*') ? 'active' : '' }}" href="#">
-          <span data-feather="file-text"></span>
+          <span data-feather="file-plus"></span>
           Posts
         </a>
-      </li> --}}
+      </li>
     </ul>
 
   </div>

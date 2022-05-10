@@ -50,7 +50,7 @@
                       <li class="nav-item dropdown">
                           <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                               {{ Auth::user()->name }}
-                              <img src="https://ui-avatars.com/api/?name=name={{Auth::user()->name}}" class="rounded-circle user-photo w-15" alt="" style="max-height: 45px;">
+                              <img src="https://ui-avatars.com/api/?name={{Auth::user()->name}}" class="rounded-circle user-photo w-15" alt="" style="max-height: 45px;">
                           </a>
     
                           <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
@@ -109,7 +109,7 @@
                   <li class="nav-item dropdown">
                       <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                           {{ Auth::user()->name }}
-                          <img src="https://ui-avatars.com/api/?name=name={{Auth::user()->name}}" class="rounded-circle user-photo w-15" alt="" style="max-height: 45px;">
+                          <img src="https://ui-avatars.com/api/?name={{Auth::user()->name}}" class="rounded-circle user-photo w-15" alt="" style="max-height: 45px;">
                       </a>
 
                       <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">

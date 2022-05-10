@@ -62,7 +62,7 @@ data-aos="fade-up"
                 { data: 'id', name: 'id' },
                 { data: 'name', name: 'name' },
                 { data: 'email', name: 'email' },
-                { data: 'is_admin', name: 'is_admin' },
+                { data: 'roles', name: 'roles' },
                 {
                     data: 'action',
                     name: 'action',

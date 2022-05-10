@@ -48,14 +48,14 @@ data-aos="fade-up"
                                 <input type="password" name="password" class="form-control">
                                 <small>Kosongkan jika tidak ingin mengganti password</small>
                               </div>
-                              {{-- <div class="form-group mt-3">
+                              <div class="form-group mt-3">
                                 <label>Roles</label>
                                 <select name="roles" required class="form-control">
                                   <option value="{{ $item->roles }}" selected>Tidak diganti</option>
-                                  <option value="1">Admin</option>
-                                  <option value="0">User</option>
+                                  <option value="ADMIN">Admin</option>
+                                  <option value="USER">User</option>
                                 </select>
-                              </div> --}}
+                              </div>
                             </div>
                           </div>
 

@@ -38,7 +38,7 @@ data-aos="fade-up"
                                 <label>Nama Kategori</label>
                                 <input type="text" name="name" class="form-control" required>
                               </div>
-                              <div class="form-group">
+                              <div class="form-group mt-2">
                                 <label>Foto</label>
                                 <input type="file" name="photo" class="form-control" required>
                               </div>

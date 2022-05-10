@@ -46,13 +46,13 @@ data-aos="fade-up"
                                 <label>Password User</label>
                                 <input type="password" name="password" class="form-control" required>
                               </div>
-                              {{-- <div class="form-group mt-3">
+                              <div class="form-group mt-3">
                                 <label>Roles</label>
                                 <select name="roles" required class="form-control">
-                                  <option value="1">Admin</option>
-                                  <option value="0">User</option>
+                                  <option value="ADMIN">Admin</option>
+                                  <option value="USER">User</option>
                                 </select>
-                              </div> --}}
+                              </div>
                             </div>
                           </div>
                           <div class="row">
