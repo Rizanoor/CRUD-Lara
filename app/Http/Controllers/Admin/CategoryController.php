@@ -56,6 +56,7 @@ class CategoryController extends Controller
                 ->rawColumns(['action', 'photo'])
                 ->make();
         }
+
         return view('pages.admin.category.index');
     }
 
