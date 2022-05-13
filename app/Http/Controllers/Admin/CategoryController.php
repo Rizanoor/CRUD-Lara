@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Models\Category;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
-use App\Http\Requests\Admin\CategoryRequest;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
-use Illuminate\Support\Facades\Storage;
-use Yajra\DataTables\Facades\DataTables;
+use App\Http\Requests\Admin\CategoryRequest;
 
+use Yajra\DataTables\Facades\DataTables;
 
 class CategoryController extends Controller
 {
@@ -60,7 +60,6 @@ class CategoryController extends Controller
         return view('pages.admin.category.index');
     }
 
-
     /**
      * Show the form for creating a new resource.
      *
@@ -77,7 +76,6 @@ class CategoryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-
     public function store(CategoryRequest $request)
     {
         $data = $request->all();
@@ -123,7 +121,6 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-
     public function update(CategoryRequest $request, $id)
     {
         $data = $request->all();
@@ -146,7 +143,6 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-
         $item = Category::findOrFail($id);
         $item->delete();
 

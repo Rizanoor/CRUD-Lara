@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
-use App\Http\Requests\Admin\UserRequest;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
-use Illuminate\Support\Facades\Storage;
-use Yajra\DataTables\Facades\DataTables;
+use App\Http\Requests\Admin\UserRequest;
 
+use Yajra\DataTables\Facades\DataTables;
 
 class UserController extends Controller
 {
@@ -50,7 +50,7 @@ class UserController extends Controller
                             </div>
                     </div>';
                 })
-                ->rawColumns(['action'])
+                ->rawColumns(['action', 'photo'])
                 ->make();
         }
 
