@@ -34,6 +34,13 @@
           Posts
         </a>
       </li>
+
+      <li class="nav-item">
+        <a class="nav-link {{ Request::is('admin/gallery*') ? 'active' : '' }}" href="#">
+          <span data-feather="image"></span>
+          Galleries
+        </a>
+      </li>
     </ul>
 
   </div>
