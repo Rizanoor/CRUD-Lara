@@ -11,9 +11,9 @@ data-aos="fade-up"
 >
 <div class="container-fluid">
     <div class="dashboard-heading">
-        <h2 class="dashboard-title pt-3">User</h2>
-        <p class="dashboard-subtitle">
-            Edit User
+        <h2 class="dashboard-title pt-3">User</h2> Edit User
+        <p class="dashboard-subtitle badge bg-success">
+          "{{ $item->name }}"
         </p>
     </div>
     <div class="dashboard-content">

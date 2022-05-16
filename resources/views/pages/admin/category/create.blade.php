@@ -34,7 +34,7 @@ data-aos="fade-up"
                           @csrf
                           <div class="row">
                             <div class="col md-12">
-                              <div class="form-group">
+                              <div class="form-group mt-2">
                                 <label>Nama Kategori</label>
                                 <input type="text" name="name" class="form-control" required>
                               </div>

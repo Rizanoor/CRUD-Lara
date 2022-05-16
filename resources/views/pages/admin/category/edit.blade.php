@@ -11,9 +11,9 @@ data-aos="fade-up"
 >
 <div class="container-fluid">
     <div class="dashboard-heading">
-        <h2 class="dashboard-title pt-3">Category</h2>
-        <p class="dashboard-subtitle">
-            Edit Category
+        <h2 class="dashboard-title pt-3">Category</h2> Edit Category
+        <p class="dashboard-subtitle badge bg-success">
+             "{{ $item->name }}"
         </p>
     </div>
     <div class="dashboard-content">
@@ -39,7 +39,7 @@ data-aos="fade-up"
                                 <label>Nama Kategori</label>
                                 <input type="text" name="name" class="form-control" value="{{ $item->name }}" required>
                               </div>
-                              <div class="form-group">
+                              <div class="form-group mt-2">
                                 <label>Foto</label>
                                 <input type="file" name="photo" class="form-control">
                               </div>

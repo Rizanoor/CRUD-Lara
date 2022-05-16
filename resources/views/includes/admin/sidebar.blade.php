@@ -29,7 +29,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link {{ Request::is('admin/posts*') ? 'active' : '' }}" href="#">
+        <a class="nav-link {{ Request::is('admin/post*') ? 'active' : '' }}" href="{{ route('post.index') }}">
           <span data-feather="file-plus"></span>
           Posts
         </a>
