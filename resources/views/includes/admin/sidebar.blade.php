@@ -36,7 +36,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link {{ Request::is('admin/gallery*') ? 'active' : '' }}" href="#">
+        <a class="nav-link {{ Request::is('admin/gallery*') ? 'active' : '' }}" href="{{ route('gallery.index') }}">
           <span data-feather="image"></span>
           Galleries
         </a>

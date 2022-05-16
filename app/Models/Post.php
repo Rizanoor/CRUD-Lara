@@ -20,7 +20,10 @@ class Post extends Model
 
     protected $hidden = [];
 
-    
+    public function galleries()
+    {
+        return $this->hasMany(Gallery::class, 'posts_id', 'id');
+    }
 
     public function user()
     {

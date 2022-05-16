@@ -1,16 +1,20 @@
 @extends('layouts.admin')
 
 @section('title')
-    Categories Dashboard
+    Galleries Dashboard
 @endsection
 
 @section('container')
-<div class="section-content section-dashboard-home" data-aos="fade-up">
+<!-- Section Content -->
+<div
+    class="section-content section-dashboard-home"
+    data-aos="fade-up"
+    >
     <div class="container-fluid">
         <div class="dashboard-heading">
-            <h2 class="dashboard-title pt-3">Category</h2>
+            <h2 class="dashboard-title mt-3">Gallery</h2>
             <p class="dashboard-subtitle">
-                List of Categories
+                List of Gallery
             </p>
         </div>
         <div class="dashboard-content">
@@ -18,17 +22,16 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-body">
-                            <a href="{{  route('category.create') }}" class="btn btn-primary mb-3">
-                                + Tambah Kategori Baru
+                            <a href="{{  route('gallery.create') }}" class="btn btn-primary mb-3">
+                                + Tambah Gallery
                             </a>
                             <div class="table-responsive">
                                 <table class="table table-hover scroll-horizontal-vertical w-100" id="crudTable">
                                     <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Nama</th>
+                                        <th>Product</th>
                                         <th>Foto</th>
-                                        <th>Slug</th>
                                         <th>Aksi</th>
                                     </tr>
                                     </thead>
@@ -42,8 +45,8 @@
         </div>
     </div>
 </div>
-
 @endsection
+
 
 @push('addon-script')
     <script>
@@ -57,9 +60,8 @@
             },
             columns: [
                 { data: 'id', name: 'id' },
-                { data: 'name', name: 'name' },
-                { data: 'photo', name: 'photo' },
-                { data: 'slug', name: 'slug' },
+                { data: 'post.name', name: 'post.name' },
+                { data: 'photos', name: 'photos' },
                 {
                     data: 'action',
                     name: 'action',

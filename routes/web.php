@@ -37,5 +37,6 @@ Route::prefix('admin')
             Route::resource('category', 'CategoryController');
             Route::resource('user', 'UserController');
             Route::resource('post', 'PostController');
+            Route::resource('gallery', 'GalleryController');
     
 });
