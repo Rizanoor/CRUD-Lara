@@ -6,12 +6,12 @@
   <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
-        <form action="/logout" method="post">
-          @csrf
+        <a href="{{ route('home') }}">
+          
           <button type="submit" class="nav-link px-3 bg-dark border-0">
             <span data-feather="log-out"></span> 
           </button>
-        </form>
+        </a>
     </div>
   </div>
 </header>

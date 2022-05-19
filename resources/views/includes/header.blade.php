@@ -43,7 +43,9 @@
                   <a href="{{ route('login') }}" class="btn btn-default btn-no-fill">Log In</a>
                   <a href="{{ route('register') }}" class="btn btn-fill text-white">Register</a>
                 </div>
-              @else
+              @endguest
+
+              @auth
                 <ul class="navbar-nav ms-auto">
                       <li class="nav-item dropdown">
                           <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -65,7 +67,8 @@
                               </form>
                           </div>
                       </li>
-                  @endguest
+              @endauth
+              
                 </ul>
             </div>
           </div>
@@ -91,34 +94,36 @@
             <a href="{{ route('register') }}" class="btn btn-fill text-white">Register</a>
           </div>
 
-          @else
-              <ul class="navbar-nav ms-auto">
-                    <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            Hi, {{ Auth::user()->name }}
-                            @if (Auth::user()->avatar)
-                                <img src="{{ Auth::user()->avatar }}" class="rounded-circle user-photo w-15" alt="" style="max-height: 45px;">
-                            @else
-                                <img src="https://ui-avatars.com/api/?name={{Auth::user()->name}}" class="rounded-circle user-photo w-15" alt="" style="max-height: 45px;">
-                            @endif
-                        </a>
-  
-                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                          <a href="{{ route('dashboard-settings-account') }}" class="dropdown-item">My Account</a>
-                          <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{ route('logout') }}"
-                                onclick="event.preventDefault();
-                               document.getElementById('logout-form').submit();">
-                                Logout
-                            </a>
-  
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                @csrf
-                            </form>
-                        </div>
-                    </li>
-              </ul>
         @endguest
+
+          @auth
+            <ul class="navbar-nav ms-auto">
+                  <li class="nav-item dropdown">
+                      <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                          Hi, {{ Auth::user()->name }}
+                          @if (Auth::user()->avatar)
+                              <img src="{{ Auth::user()->avatar }}" class="rounded-circle user-photo w-15" alt="" style="max-height: 45px;">
+                          @else
+                              <img src="https://ui-avatars.com/api/?name={{Auth::user()->name}}" class="rounded-circle user-photo w-15" alt="" style="max-height: 45px;">
+                          @endif
+                      </a>
+
+                      <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <a href="{{ route('dashboard-settings-account') }}" class="dropdown-item">My Account</a>
+                        <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="{{ route('logout') }}"
+                              onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
+                              Logout
+                          </a>
+
+                          <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                              @csrf
+                          </form>
+                      </div>
+                  </li>
+            </ul>
+          @endauth
       </div>
     </nav>
 

@@ -1,8 +1,7 @@
 <section class="h-100 w-100 bg-white" style="box-sizing: border-box">
   <div class="container-xxl mx-auto p-0  position-relative header-2-2" style="font-family: 'Poppins', sans-serif">
-      {{-- navbar --}}
     <nav class="navbar navbar-expand-lg navbar-light">
-      <a href="#">
+      <a href="{{ route('home') }}">
         <img style="margin-right: 0.75rem"
           src="http://api.elements.buildwithangga.com/storage/files/2/assets/Header/Header2/Header-2-5.png" alt="" />
       </a>
@@ -22,6 +21,8 @@
               </a>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+
+            {{-- Mobile --}}
             <div class="modal-body" style="padding: 2rem; padding-top: 0; padding-bottom: 0">
               <ul class="navbar-nav responsive me-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
@@ -31,21 +32,20 @@
                   <a class="nav-link" href="#">Games</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" target="blank" href="https://readyplayer.me/avatar">Create Avatar</a>
+                  <a class="nav-link" href="#">Create Avatar</a>
                 </li>
               </ul>
             </div>
             <div class="modal-footer border-0 gap-3" style="padding: 2rem; padding-top: 0.75rem">
               <!-- Authentication Links -->
               @guest
-                  @if (Route::has('login'))
-                      <a class="btn btn-default btn-no-fill" href="{{ route('login') }}">{{ __('Login') }}</a>
-                  @endif
+                <div class="gap-3">
+                  <a href="{{ route('login') }}" class="btn btn-default btn-no-fill">Log In</a>
+                  <a href="{{ route('register') }}" class="btn btn-fill text-white">Register</a>
+                </div>
+              @endguest
 
-                  @if (Route::has('register'))
-                      <a class="btn btn-fill text-white" href="{{ route('register') }}">{{ __('Register') }}</a>
-                  @endif
-              @else
+              @auth
                 <ul class="navbar-nav ms-auto">
                       <li class="nav-item dropdown">
                           <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -54,12 +54,12 @@
                           </a>
     
                           <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            <a href="" class="dropdown-item">My Account</a>
+                            <a href="{{ route('dashboard-settings-account') }}" class="dropdown-item">My Account</a>
                             <div class="dropdown-divider"></div>
                               <a class="dropdown-item" href="{{ route('logout') }}"
-                                onclick="event.preventDefault();
-                                              document.getElementById('logout-form').submit();">
-                                  {{ __('Logout') }}
+                                 onclick="event.preventDefault();
+                                 document.getElementById('logout-form').submit();">
+                                 Logout
                               </a>
     
                               <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -67,13 +67,15 @@
                               </form>
                           </div>
                       </li>
-                  @endguest
+              @endauth
+              
                 </ul>
             </div>
           </div>
         </div>
       </div>
 
+      {{-- Dekstop --}}
       <div class="collapse navbar-collapse" id="navbarTogglerDemo">
         <ul class="navbar-nav me-auto mt-2 mt-lg-0">
           <li class="nav-item active">
@@ -83,42 +85,36 @@
             <a class="nav-link" href="#">Games</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" target="blank" href="https://readyplayer.me/avatar">Create Avatar</a>
+            <a class="nav-link" href="#">Create Avatar</a>
           </li>
         </ul>
-        <div class="gap-3">
-          {{-- <a href="{{ route('login') }}" class="btn btn-default btn-no-fill">Log In</a>
-          <a href="{{ route('register') }}" class="btn btn-fill btn-no-fill">Register</a> --}}
+        @guest
+          <div class="gap-3">
+            <a href="{{ route('login') }}" class="btn btn-default btn-no-fill">Log In</a>
+            <a href="{{ route('register') }}" class="btn btn-fill text-white">Register</a>
+          </div>
 
-          <!-- Right Side Of Navbar -->
+        @endguest
+
+          @auth
             <ul class="navbar-nav ms-auto">
-              <!-- Authentication Links -->
-              @guest
-                  @if (Route::has('login'))
-                      <li class="nav-item">
-                          <a class="btn btn-default btn-no-fill" href="{{ route('login') }}">{{ __('Login') }}</a>
-                      </li>
-                  @endif
-
-                  @if (Route::has('register'))
-                      <li class="nav-item">
-                          <a class="btn btn-fill text-white" href="{{ route('register') }}">{{ __('Register') }}</a>
-                      </li>
-                  @endif
-              @else
                   <li class="nav-item dropdown">
                       <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                          {{ Auth::user()->name }}
-                          <img src="https://ui-avatars.com/api/?name={{Auth::user()->name}}" class="rounded-circle user-photo w-15" alt="" style="max-height: 45px;">
+                          Hi, {{ Auth::user()->name }}
+                          @if (Auth::user()->avatar)
+                              <img src="{{ Auth::user()->avatar }}" class="rounded-circle user-photo w-15" alt="" style="max-height: 45px;">
+                          @else
+                              <img src="https://ui-avatars.com/api/?name={{Auth::user()->name}}" class="rounded-circle user-photo w-15" alt="" style="max-height: 45px;">
+                          @endif
                       </a>
 
                       <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <a href="" class="dropdown-item">My Account</a>
+                        <a href="{{ route('dashboard-settings-account') }}" class="dropdown-item">My Account</a>
                         <div class="dropdown-divider"></div>
                           <a class="dropdown-item" href="{{ route('logout') }}"
-                            onclick="event.preventDefault();
-                                          document.getElementById('logout-form').submit();">
-                              {{ __('Logout') }}
+                              onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
+                              Logout
                           </a>
 
                           <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -126,9 +122,8 @@
                           </form>
                       </div>
                   </li>
-              @endguest
-          </ul>
-        </div>
+            </ul>
+          @endauth
       </div>
     </nav>
     </div>
