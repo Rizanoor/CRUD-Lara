@@ -31,12 +31,9 @@
               </h4>
               <img src="{{ Storage::url($category->photo) }}" alt="">
               <p class="text-caption mt-2">
-                We have provided highly experienced mentors<br class="d-sm-inline d-none" />
-                for several years.
-                <a href="" class="badge bg-success" style="text-decoration:none">Try</a>
+                {!! $category->description !!}<a href="" class="badge bg-success" style="text-decoration:none">Try</a>
               </p>
-            </li>
-
+           </li>
           </ul>
           @empty
           <div class="col-12 text-center py-5" data-aos="fade-up" data-aos-delay="100">

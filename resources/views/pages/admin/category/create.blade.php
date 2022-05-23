@@ -42,6 +42,10 @@ data-aos="fade-up"
                                 <label>Foto</label>
                                 <input type="file" name="photo" class="form-control" required>
                               </div>
+                              <div class="form-group mt-2">
+                                <label>Deskripsi Post</label>
+                                <textarea name="description" id="editor"></textarea>
+                              </div>
                             </div>
                           </div>
 
@@ -61,3 +65,17 @@ data-aos="fade-up"
 </div>
 
 @endsection
+
+@push('addon-script')
+  <script src="https://cdn.ckeditor.com/ckeditor5/31.1.0/classic/ckeditor.js"></script>
+  <script>
+    ClassicEditor
+            .create( document.querySelector( '#editor' ) )
+            .then( editor => {
+                    console.log( editor );
+            } )
+            .catch( error => {
+                    console.error( error );
+            } );
+  </script>
+@endpush

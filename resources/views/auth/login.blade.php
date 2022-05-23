@@ -83,7 +83,7 @@
           </div>
 
           <div class="d-flex justify-content-end" style="margin-top: 0.75rem">
-            <a href="#" class="forgot-password fst-italic">Forgot Password?</a>
+            <a href="{{ route('password.request') }}" class="forgot-password fst-italic">Forgot Password?</a>
           </div>
           <button class="btn btn-fill text-white d-block w-100" type="submit" href="{{ route('home') }}">
             Log In To My Account
