@@ -7,7 +7,7 @@
 @section('content')
   <div class="section-content">
     <div class="container-fluid ">
-      
+
       <div class="dashboard-content">
         <div class="row justify-content-center">
           <div class="col-10">
@@ -35,7 +35,7 @@
                           @endif
                       </div>
                     </div>
-        
+
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="email">Your Email</label>
@@ -53,7 +53,7 @@
                         <small>Kosongkan jika tidak ingin mengganti password</small>
                       </div>
                     </div>
-        
+
                     <div class="form-group mt-2">
                       <form action="/upload" method="POST">
                         @csrf

@@ -69,7 +69,7 @@ class DashboardSettingController extends Controller
      */
     public function edit($id)
     {
-        
+
     }
 
     /**
@@ -81,8 +81,6 @@ class DashboardSettingController extends Controller
      */
     public function update(Request $request, $redirect)
     {
-
-
         $data = $request->all();
         $item = Auth::user();
 
@@ -91,7 +89,18 @@ class DashboardSettingController extends Controller
         } else {
             unset($data['password']);
         }
-        
+
+        // Handle the user upload of photo
+        if ($request->hasFile('photo')) {
+            $photo = $request->file('photo');
+            $filename = time() . '.' . $photo->getClientOriginalExtension();
+            Image::make($photo)->resize(300, 300)->save(public_path('uploads/photos/' . $filename));
+
+            $user = Auth::user();
+            $user->photo = $filename;
+            $user->save();
+        }
+
         // if ($request->hasFile('image')) {
         //     $filename = $request->image->getClientOriginalName();
         //     $request->image->storePubliclyAs('images',$filename, 'public');
@@ -101,9 +110,9 @@ class DashboardSettingController extends Controller
         // return $request->file('image')->update('avatar');
 
         // $path = $request->file('avatar')->store('avatars');
- 
+
         // return $path;
-        
+
         // return 'upload';
 
         $item->update($data);
@@ -125,7 +134,7 @@ class DashboardSettingController extends Controller
 
     public function uploadAvatar(Request $request)
     {
-        
+
     }
 }
 
