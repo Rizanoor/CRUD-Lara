@@ -75,8 +75,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 - **Jalankan program**
 
 ## Login
-- **Email:admin@gmail.com**
-- **Password:password**
+- **Email: admin@gmail.com**
+- **Password: password**
 
 - **JIKA INGIN MEMASUKIN HALAMAN ADMIN**
 - **http://CRUD-lara.test/admin**
