@@ -21,7 +21,7 @@
                 User
               </div>
               <div class="dashboard-card-subtitle">
-                3
+                16
               </div>
             </div>
           </div>
@@ -34,7 +34,7 @@
                 Categories
               </div>
               <div class="dashboard-card-subtitle">
-                3
+                0
               </div>
             </div>
           </div>
@@ -47,7 +47,7 @@
                 My Post
               </div>
               <div class="dashboard-card-subtitle">
-                3
+                0
               </div>
             </div>
           </div>
@@ -91,10 +91,10 @@
     font-weight: normal;
     font-size: 18px;
     line-height: 40px;
-    border-radius: 
+    border-radius:
     color: #0c0d36;
   }
 
 </style>
-    
+
 @endpush
